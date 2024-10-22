@@ -60,10 +60,10 @@ function App() {
         <NameDisplay name={`${name} - BSIT 3-A`} />
         <Display display={disp} />
         <div className="ButtonsContainer">
-          {items.map((_, index) => (
+          {items.slice(0, 9).map((_, index) => (
             <Key key={index} label={index + 1} clickHandler={() => itemClickHandler(index)} />
           ))}
-          <Key label={"0"} clickHandler={() => setDisp("0")} />
+          <Key label={"0"} clickHandler={() => itemClickHandler(9)} /> {/* Index 9 for "Having A Strong Work Ethic" */}
           <Key label={"RESET"} clickHandler={resetClickHandler} />
           <Key label={"NAME"} clickHandler={nameClickHandler} />
         </div>
@@ -73,4 +73,3 @@ function App() {
 }
 
 export default App;
-
