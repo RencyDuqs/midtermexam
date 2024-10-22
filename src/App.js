@@ -26,7 +26,7 @@ function NameDisplay({ name }) {
 }
 
 function App() {
-  const [disp, setDisp] = useState("0 Things That Require Zero Talent");
+  const [disp, setDisp] = useState("10 Things That Require Zero Talent");
   const [name] = useState("Rency Dayne M. Duque");
 
   const items = [
